@@ -10,3 +10,4 @@ def index():
     '''
     message = 'One Minute Pitch!!!'
     return render_template('index.html', message = message)
+    
