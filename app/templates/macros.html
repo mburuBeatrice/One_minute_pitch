@@ -1,7 +1,16 @@
-<!-- {% macro displayMovieList(movie_list) %}
+{% macro displayPitchList(pitch) %}
 
-    {% for movie in movie_list %}
-        <li>{{ movie.title}}</li>
+    {% for item in pitch %}
+        <li>{{ item.title}}</li>
     {% endfor %}
 
-{% endmacro %} -->
+ {% endmacro %} 
+
+ {% macro displayCommentLink(comments) %}
+    {% for comment in comments %}
+        <li><a href="{{url_for('main.new_comment')}}">Create a comment</a></li>
+    </div>
+  
+    {% endfor %}
+
+ {% endmacro %} 
