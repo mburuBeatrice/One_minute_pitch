@@ -53,8 +53,9 @@ def index():
     View root page function that returns the index page and its data
     '''
     title = 'One Minute Pitch'
-    
-    return render_template('index.html', title = title)
+    pitches=Pitch.get_pitch()   
+    print(pitches)
+    return render_template('index.html', title = title,pitches=pitches)
 
 @main.route('/pitch/',methods = ['GET','POST'])
 @login_required
